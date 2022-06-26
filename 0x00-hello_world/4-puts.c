@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int main() {
-	char string[] = "Programming is like building a multilingual puzzle"; // string initialization
-	puts(string); // write string to stdout
+int main(void){
+	char string[] = '"Programming is like building a multilingual puzzle';
+	puts(string);
 	return 0;
 }
