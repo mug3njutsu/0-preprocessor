@@ -9,6 +9,7 @@
 
 int main(void)
 {
-	write(1, "echo and that piece of art is useful\" - Dora Korpar, 2015-10-19\n". 59);
+	char chrs[] = "echo and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
+    write(1, chrs, sizeof(chrs));
 	return (1);
 }
