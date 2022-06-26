@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - Run main code
- * string[] - sequence of characters terminated by a null character
- * puts - print to stdout
- * return - the function doesn't return any value
-*/
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
