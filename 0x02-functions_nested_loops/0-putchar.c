@@ -8,12 +8,12 @@
 
 int main(void)
 {
-	char out[] = "_putchar"; /** string */
+	char out[] = "_putchar";
 	int i;
 
-	for (i < 0; i < (sizeof(out)); i++) /** loop through chars */
+	for (i < 0; i < (sizeof(out)); i++)
 	{
-		_putchar(out[i]); /** stdout */
+		_putchar(out[i]);
 	}
 
 	return (0);
