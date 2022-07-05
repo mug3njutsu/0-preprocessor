@@ -10,7 +10,6 @@ int main(void)
 {
 
 	char out[] = "_putchar";
-	char new_line = '\n';
 	int size = sizeof(out);
 	int a;
 
@@ -18,6 +17,6 @@ int main(void)
 	{
 		_putchar(out[a]);
 	}
-	_putchar(new_line);
+	_putchar('\n');
 	return (0);
 }
