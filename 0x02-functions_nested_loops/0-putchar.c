@@ -1,14 +1,12 @@
-#include <main.h>
-
 /**
  * main - prints "_putchar"
  *
- * Return: Always 0 -> (Sucess)
+ * Return: Always 0 -> (Success)
  */
 
 int main(void)
 {
-	char out[] = "_putchar";
+	#include <main.h>
 	int i;
 
 	for (i < 0; i < (sizeof(out)); i++)
