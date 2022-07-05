@@ -9,6 +9,7 @@
 int main(void)
 {
 	char letters[] = "abcdefghijklmnopqrstuvwxyz\n";
+	int size = sizeof(letters);
 	int i;
 
 	for (i = 0; i < size; i++)
