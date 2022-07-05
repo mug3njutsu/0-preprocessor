@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_times_table - If n is greater than 15 or less than 0 the function should not print anything
- * @n: int
+ * print_times_table - checks if is greater than 15 or less than 0
+ *  * @n: int
  */
 
 void print_times_table(int n)
