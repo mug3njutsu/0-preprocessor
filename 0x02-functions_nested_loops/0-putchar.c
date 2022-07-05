@@ -10,6 +10,7 @@ int main(void)
 {
 
 	char out[] = "_putchar";
+	int a;
 
 	for (a = 0; a < (sizeof(out)); a++)
 	{
