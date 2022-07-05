@@ -8,15 +8,12 @@
 
 int main(void)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
-	
+
+	char out[] = "_putchar";
+
+	for (a = 0; a < (sizeof(out)); a++)
+	{
+		_putchar(out[a])
+	}
 	return (0);
 }
