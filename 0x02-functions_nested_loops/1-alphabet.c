@@ -8,7 +8,7 @@
 
 void print_alphabet(void)
 {
-	char letters[] = "abcdefghijklmnopqrstuvwxyz\n";
+	char letters[] = "abcdefghijklmnopqrstuvwxyz";
 	int size = sizeof(letters);
 	int i;
 
