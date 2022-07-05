@@ -14,9 +14,9 @@ int main(void)
 	int i;
 
 	for (i = 0; i < size; i++)
-	{
+		{
 		_putchar(out[i]);
-	}
+		}
 		_putchar('\n');
 	return (0);
 }
