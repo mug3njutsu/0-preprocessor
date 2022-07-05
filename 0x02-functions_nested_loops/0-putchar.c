@@ -1,4 +1,4 @@
-#include "main.h"
+#include "main.h" /** custom header file */
 
 /**
  * main - prints "_putchar"
@@ -8,12 +8,12 @@
 
 int main(void)
 {
-	char out[] = "_putchar";
+	char out[] = "_putchar"; /** string */
 	int i;
 
-	for (i < 0; i < (sizeof(out)); i++)
+	for (i < 0; i < (sizeof(out)); i++) /** loop through chars */
 	{
-		_putchar(out[i]);
+		_putchar(out[i]); /** stdout */
 	}
 
 	return (0);
