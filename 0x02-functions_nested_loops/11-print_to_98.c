@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * add - adds two integers and returns the result
+ * print_to_98 - adds two integers and returns the result
  * @n: int
  * Return: validations
  */
