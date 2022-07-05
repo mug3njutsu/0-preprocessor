@@ -5,7 +5,7 @@
  * Return: validations
  */
 
-void times_table(void);
+void times_table(void)
 {
 	int i, j, k;
 
