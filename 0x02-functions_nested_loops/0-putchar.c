@@ -17,7 +17,5 @@ int main(void)
 	{
 		_putchar(out[a]);
 	}
-
-	_putchar("\n");
 	return (0);
 }
