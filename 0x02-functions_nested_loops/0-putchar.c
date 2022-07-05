@@ -9,13 +9,14 @@
 int main(void)
 {
 
-	char out[] = "_putchar";
-	int size = sizeof(out);
-	int i;
-
-	for (i = 0; i < size; i++)
-	{
-		_putchar(stderr, out[i], size);
-	}
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }
