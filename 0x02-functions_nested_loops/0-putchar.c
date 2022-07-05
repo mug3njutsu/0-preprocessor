@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * main - prints "_putchar"
@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	#include <main.h>
+	char out[] = "_putchar";
 	int i;
 
 	for (i < 0; i < (sizeof(out)); i++)
