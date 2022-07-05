@@ -9,7 +9,7 @@
 int main(void)
 {
 
-	char out[] = "_putchar\n";
+	char out[] = "_putchar";
 	int size = sizeof(out);
 	int a;
 
@@ -17,5 +17,7 @@ int main(void)
 	{
 		_putchar(out[a]);
 	}
+
+	_putchar("\n");
 	return (0);
 }
