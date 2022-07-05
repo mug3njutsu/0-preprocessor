@@ -1,5 +1,5 @@
 /**
- * print_last_digit - computes the absolute value of an integer
+ * print_last_digit - prints the last digit of a number
  *@n: int
  * Return: validations
  */
