@@ -2,7 +2,7 @@
 
 /**
  * print_times_table - checks if is greater than 15 or less than 0
- *  * @n: int
+ * @n: int
  */
 
 void print_times_table(int n)
