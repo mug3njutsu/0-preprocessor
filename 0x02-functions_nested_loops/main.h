@@ -1,1 +1,1 @@
-#include <stdio.h>
+char out[] = "_putchar";
