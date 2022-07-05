@@ -9,7 +9,7 @@
 void print_alphabet(void)
 {
 	char letters[] = "abcdefghijklmnopqrstuvwxyz\n";
-	int size = size(letters);
+	int size = sizeof(letters);
 	int i;
 
 	for (i = 0; i < size; i++)
