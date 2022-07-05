@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - print alphabets "a..z"
+ * print_sign - prints the sign of a number
  *@n: int
  * Return: Always 0 -> (Success)
  */
