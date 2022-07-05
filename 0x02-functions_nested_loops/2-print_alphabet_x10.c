@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_alphabet - print alphabets "a..z"
  *
@@ -6,14 +8,15 @@
 
 void print_alphabet_x10(void)
 {
-    int a, i;
+    int a = 0, i;
 
-    for (a = 0; a < 10; a++)
+    while ( a < 10 )
     {
         for (i = 'a'; i <= 'z'; i++)
         {
             _putchar(i);
         }
         _putchar('\n');
+        a++
     }
 }
