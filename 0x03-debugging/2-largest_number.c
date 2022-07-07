@@ -1,22 +1,16 @@
 #include "main.h"
 
 /**
-* main - returns the largest of 3 numbers
-* Return: 0
-*/
+ * main - returns the largest of 3 numbers
+ * Return: largest number
+ */
 
 int main(void)
 {
-int a, b, c;
 int largest;
-
-a = 0;
-b = -30;
-c = -100;
+int a, b, c;
 
 largest = largest_number(a, b, c);
 
-printf("%d is the largest number\n", largest)
-
-return (0);
+return (largest);
 }
