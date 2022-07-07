@@ -2,24 +2,21 @@
 
 /**
  * main - returns the largest of 3 numbers
- * @a: first integer
- * @b: second integer
- * @c: third integer
  * Return: 0
  */
 
 int main(void)
 {
-int a, b, c;
-int largest;
+    int a, b, c;
+    int largest;
 
-a = 100;
-b = 200;
-c = 300;
+    a = 972;
+    b = -98;
+    c = 0;
 
-largest = largest_number(a, b, c);
+    largest = largest_number(a, b, c);
 
-printf("%d is the largest number\n", largest);
+    printf("%d is the largest number\n", largest);
 
-return (0);
+    return (0);
 }
