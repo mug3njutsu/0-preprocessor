@@ -7,6 +7,8 @@
 
 void _puts(char *str)
 {
-	_putchar(*str);
+	char a[] = *str;
+	
+	_putchar(a);
 	_putchar('\n');
 }
