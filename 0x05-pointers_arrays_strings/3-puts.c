@@ -7,7 +7,7 @@
 
 void _puts(char *str)
 {
-	char a[] = *str;
+	char = *str;
 	
 	_putchar(a);
 	_putchar('\n');
