@@ -24,4 +24,6 @@ void print_rev(char *s)
 		s[right] = original_char;
 		right--;
 	}
+
+	return (s);
 }
