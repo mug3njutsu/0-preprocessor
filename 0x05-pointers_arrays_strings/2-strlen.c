@@ -9,3 +9,4 @@ int _strlen(char *s)
 
 	printf(i);
 }
+
