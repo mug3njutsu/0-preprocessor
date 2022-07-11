@@ -7,7 +7,7 @@
 
 void print_rev(char *s)
 {
-	char temp;
+	char original_char;
 	int i, left = 0, right, len;
 
 	while (*s != '\0')
@@ -19,9 +19,9 @@ void print_rev(char *s)
 
 	for (i = left; i < right; i++)
 	{
-		temp = *s[i];
-		*s[i] = *s[right];
-		*s[right] = temp;
+		original_char = s[i];
+		s[i] = s[right];
+		s[right] = original_char;
 		right--;
 	}
 }
