@@ -13,7 +13,7 @@ int i = 0, count = 0;
 
 while (s[i++] != "\0")
 {
-    count += 1;
+count += 1;
 }
 
 return (count);
