@@ -2,9 +2,9 @@
 
 /**
  * print_number - prints an integer.
- * @n: input integer.
- * Return: void.
+ * @n: int
  */
+
 void print_number(int n)
 {
 	unsigned int a, b, c;
