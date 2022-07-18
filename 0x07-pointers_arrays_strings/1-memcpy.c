@@ -5,7 +5,6 @@
  * @dest: pointer
  * @src: source buffer
  * @n: bytes of memory
- *
  * Return: stuff
  */
 
