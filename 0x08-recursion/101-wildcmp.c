@@ -3,7 +3,7 @@
 /**
  * wildcmp - compares two strings
  *			returns 1 if the strings can be considered identical
- * 			otherwise return 0
+ *			otherwise return 0
  * @s1: str
  * @s2: str
  * Return: Always 0 -> (Success)
