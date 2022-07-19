@@ -18,13 +18,13 @@ int _sqrt_recursion(int n)
  * Return: stuff
  */
 
-int square(int n, int val)
+int sqrt_recurse(int n, int val)
 {
 
 	if (val * val == n)
 		return (val);
 	else if (val * val < n)
-		return  (square(n, val + 1));
+		return (sqrt_recurse(n, val + 1));
 	else
 		return (-1);
 
