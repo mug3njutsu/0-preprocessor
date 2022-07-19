@@ -6,26 +6,33 @@
  * Return: int
  */
 
-int _sqrt_recursion(int n)
+int sqrt_recurse(int start, int end, int m)
 {
-	return (square(n, 1));
-}
+	long mid;
 
+	if (end >= start)
+	{
+		mid = start + (end - start) / 2;
+		if (mid * mid == m)
+			return (mid);
+		if (mid * mid > m)
+			return (sqrt_recurse(start, mid - 1, m));
+		if (mid * mid < m)
+			return (sqrt_recurse(mid + 1, end, m));
+	}
+	return (-1);
+}
 /**
- * square - sqrt
+ * _sqrt_recursion - main
  * @n: int
- * @val: sqrt
- * Return: stuff
+ * Return: sqrt
  */
 
-int sqrt_recurse(int n, int val)
+	int _sqrt_recursion(int n)
 {
-
-	if (val * val == n)
-		return (val);
-	else if (val * val < n)
-		return (sqrt_recurse(n, val + 1));
-	else
+	if (n < 0)
 		return (-1);
-
+	if (n == 0 || n == 1)
+		return (n);
+	return (sqrt_recurse(2, n, n));
 }
