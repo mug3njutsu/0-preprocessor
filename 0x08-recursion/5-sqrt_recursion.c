@@ -12,10 +12,10 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * square - find square root
- * @n: int to find square root
- * @val: square root
- * Return: int
+ * square - sqrt
+ * @n: int
+ * @val: sqrt
+ * Return: stuff
  */
 
 int square(int n, int val)
