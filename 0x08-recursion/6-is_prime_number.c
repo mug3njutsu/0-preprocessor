@@ -13,10 +13,10 @@ int is_prime_number(int n)
 }
 
 /**
- * check_prime - check all number < n if they can divide it
+ * check_prime - checker(division)
  * @n: int
  * @resp: int
- * Return: int
+ * Return: stuff
  */
 
 int check_prime(int n, int resp)
