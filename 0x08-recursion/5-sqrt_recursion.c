@@ -1,38 +1,32 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - returns the natural square root of a number
+ * _sqrt_recursion - returns 1 if the input integer is a prime number
+ *					otherwise return 0
  * @n: int
  * Return: int
  */
 
-int sqrt_recurse(int start, int end, int m)
+int _sqrt_recursion(int n)
 {
-	long mid;
-
-	if (end >= start)
-	{
-		mid = start + (end - start) / 2;
-		if (mid * mid == m)
-			return (mid);
-		if (mid * mid > m)
-			return (sqrt_recurse(start, mid - 1, m));
-		if (mid * mid < m)
-			return (sqrt_recurse(mid + 1, end, m));
-	}
-	return (-1);
+	return (square(n, 1));
 }
+
 /**
- * _sqrt_recursion - main
+ * square - main
  * @n: int
- * Return: sqrt
+ * @val: sqrt
+ * Return: int
  */
 
-	int _sqrt_recursion(int n)
+int square(int n, int val)
 {
-	if (n < 0)
+
+	if (val * val == n)
+		return (val);
+	else if (val * val < n)
+		return  (square(n, val + 1));
+	else
 		return (-1);
-	if (n == 0 || n == 1)
-		return (n);
-	return (sqrt_recurse(2, n, n));
+
 }
