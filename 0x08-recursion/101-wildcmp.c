@@ -28,21 +28,3 @@ int wildcmp(char *s1, char *s2)
 	}
 	return (0);
 }
-
-/**
- * checkLast - last char[s2]
- * @s: str
- * @i: int
- * Return: bin
- */
-
-int checkLast(char *s, int i)
-{
-if (s[i] == '*')
-	return (checkLast(s, i + 1));
-else if (s[i] == '\0')
-	return (1);
-
-return (0);
-
-}
