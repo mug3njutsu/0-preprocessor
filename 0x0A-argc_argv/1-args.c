@@ -7,6 +7,7 @@
  *
  * Return: 0 for succesful exit
  */
+
 int main(int argc, __attribute__((unused)) char *argv[])
 {
 	printf("%d\n", argc - 1);
