@@ -7,6 +7,7 @@
  *
  * Return: 0 for succesful exit
  */
+
 int main(int argc, char *argv[])
 {
 	int i;
