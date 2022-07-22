@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - Print the of args
- * @argc: Argument count
- * @argv: Array of argument strings
- *
- * Return: 0 for succesful exit
+ * main - print args
+ * @argc: arg count
+ * @argv: array
+ * Return: Always 0 -> (Success)
  */
 
 int main(int argc, char *argv[])
