@@ -1,13 +1,12 @@
 #include <unistd.h>
-#include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
+ * _putchar - stdout
  * @c: char
- * Return: bin
+ * Return: 1
  */
 
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+    return (write(1, &c, 1));
 }
