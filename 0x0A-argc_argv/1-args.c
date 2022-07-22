@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - Print the name of the executable file
- * @argc: Argument count
- * @argv: Array of argument strings
- *
- * Return: 0 for succesful exit
+ * main - print name of the executable file
+ * @argc: arg count
+ * @argv: array
+ * Return: Always 0 -> (Success)
  */
 
 int main(int argc, __attribute__((unused)) char *argv[])
