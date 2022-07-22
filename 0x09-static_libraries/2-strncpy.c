@@ -2,10 +2,10 @@
 
 /**
  * *_strncpy - concats two strs
- * @dest: char dest
- * @src: char a appends
- * @n: use n bytes to src
- * Return: char dest
+ * @dest: char
+ * @src: char
+ * @n: n bytes to src
+ * Return: stuff
  */
 
 char *_strncpy(char *dest, char *src, int n)
