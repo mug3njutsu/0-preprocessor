@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _strdup - concatenates two strings
+ * _strdup - returns a pointer to a newly allocated space in memory
  * @str: str
  * Return: *p -> new string
  */
