@@ -1,6 +1,6 @@
-#include "holberton.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "main.h"
 
 int find_len(char *str);
 char *create_xarray(int size);
@@ -82,7 +82,7 @@ int get_digit(char c)
 }
 
 /**
- * get_prod - Multiplies a string of numbers by a single digit.
+ * get_prod - multiplies a string of numbers by a single digit.
  * @prod: buffer
  * @mult: str
  * @digit: single digit
