@@ -3,6 +3,7 @@
 
 /**
  * _realloc - reallocates a memory block using malloc and free
+ * @ptr: *p -> prev memory to be allocated
  * @old_size: bytesize(allocated space)
  * @new_size: bytesize(memory block)
  * Return: stuff
