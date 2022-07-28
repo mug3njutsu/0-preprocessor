@@ -1,53 +1,223 @@
+#include "holberton.h"
 #include <stdlib.h>
-#include "main.h"
+#include <stdio.h>
+
+int find_len(char *str);
+char *create_xarray(int size);
+char *iterate_zeroes(char *str);
+void get_prod(char *prod, char *mult, int digit, int zeroes);
+void add_nums(char *final_prod, char *next_prod, int next_len);
 
 /**
- * *_realloc -  reallocates a memory block using malloc and free
- * @ptr: void *p
- * @old_size: alloc size
- * @new_size: new size to allocate
- * Return: *p -> (newly allocated memory)
- **/
+ * find_len - len(str)
+ * @str: str
+ * Return: len(str)
+ */
 
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+int find_len(char *str)
 {
-	unsigned char *np;
-	unsigned int i;
+	int len = 0;
 
-	if (new_size == old_size)
-		return (ptr);
-	if (new_size == 0 && ptr != NULL)
+	while (*str++)
+		len++;
+
+	return (len);
+}
+
+/**
+ * create_xarray - creates array [chars]
+ * @size: sizeof(array)
+ * Return: *p -> array
+ */
+
+char *create_xarray(int size)
+{
+	char *array;
+	int index;
+
+	array = malloc(sizeof(char) * size);
+
+	if (!array)
+		exit(98);
+
+	for (index = 0; index < (size - 1); index++)
+		array[index] = 'x';
+
+	array[index] = '\0';
+
+	return (array);
+}
+
+/**
+ * iterate_zeroes - iterates through digits
+ * @str: digits
+ * Return: *p -> non-zero element
+ */
+
+char *iterate_zeroes(char *str)
+{
+	while (*str && *str == '0')
+		str++;
+
+	return (str);
+}
+
+/**
+ * get_digit - converts a digit char to an int
+ * @c: char to be converted
+ * Return: converted int.
+ */
+
+int get_digit(char c)
+{
+	int digit = c - '0';
+
+	if (digit < 0 || digit > 9)
 	{
-		free(ptr);
-		return (NULL);
+		printf("Error\n");
+		exit(98);
 	}
-	if (ptr == NULL)
+
+	return (digit);
+}
+
+/**
+ * get_prod - Multiplies a string of numbers by a single digit.
+ * @prod: buffer
+ * @mult: str
+ * @digit: single digit
+ * @zeroes: no of leading zeros
+ */
+
+void get_prod(char *prod, char *mult, int digit, int zeroes)
+{
+	int mult_len, num, tens = 0;
+
+	mult_len = find_len(mult) - 1;
+	mult += mult_len;
+
+	while (*prod)
 	{
-		ptr = malloc(new_size * sizeof(void *));
-		if (ptr == NULL)
-			return (NULL);
-		return (ptr);
+		*prod = 'x';
+		prod++;
 	}
-	np = malloc(new_size * sizeof(char));
-	if (np == NULL)
-		return (NULL);
-	i = 0;
-	if (new_size > old_size)
+
+	prod--;
+
+	while (zeroes--)
 	{
-		while (i < old_size)
+		*prod = '0';
+		prod--;
+	}
+
+	for (; mult_len >= 0; mult_len--, mult--, prod--)
+	{
+		if (*mult < '0' || *mult > '9')
 		{
-			np[i] = ((char *)ptr)[i];
-			i++;
+			printf("Error\n");
+			exit(98);
 		}
-		free(ptr);
-		return (np);
+
+		num = (*mult - '0') * digit;
+		num += tens;
+		*prod = (num % 10) + '0';
+		tens = num / 10;
 	}
-/* if new_size < old_size */
-	while (i < new_size)
+
+	if (tens)
+		*prod = (tens % 10) + '0';
+}
+
+/**
+ * add_nums - adds two numbers
+ * @final_prod: buffer
+ * @next_prod: next product
+ * @next_len: len(next prod)
+ */
+
+void add_nums(char *final_prod, char *next_prod, int next_len)
+{
+	int num, tens = 0;
+
+	while (*(final_prod + 1))
+		final_prod++;
+
+	while (*(next_prod + 1))
+		next_prod++;
+
+	for (; *final_prod != 'x'; final_prod--)
 	{
-		np[i] = ((char *)ptr)[i];
-		i++;
+		num = (*final_prod - '0') + (*next_prod - '0');
+		num += tens;
+		*final_prod = (num % 10) + '0';
+		tens = num / 10;
+
+		next_prod--;
+		next_len--;
 	}
-	free(ptr);
-	return (np);
+
+	for (; next_len >= 0 && *next_prod != 'x'; next_len--)
+	{
+		num = (*next_prod - '0');
+		num += tens;
+		*final_prod = (num % 10) + '0';
+		tens = num / 10;
+
+		final_prod--;
+		next_prod--;
+	}
+
+	if (tens)
+		*final_prod = (tens % 10) + '0';
+}
+
+/**
+ * main - multiplies two positive numbers.
+ * @argv: number of arguments
+ * @argc: [*p]
+ * Return: Always 0.
+ */
+
+int main(int argc, char *argv[])
+{
+	char *final_prod, *next_prod;
+	int size, index, digit, zeroes = 0;
+
+	if (argc != 3)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+
+	if (*(argv[1]) == '0')
+		argv[1] = iterate_zeroes(argv[1]);
+	if (*(argv[2]) == '0')
+		argv[2] = iterate_zeroes(argv[2]);
+	if (*(argv[1]) == '\0' || *(argv[2]) == '\0')
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	size = find_len(argv[1]) + find_len(argv[2]);
+	final_prod = create_xarray(size + 1);
+	next_prod = create_xarray(size + 1);
+
+	for (index = find_len(argv[2]) - 1; index >= 0; index--)
+	{
+		digit = get_digit(*(argv[2] + index));
+		get_prod(next_prod, argv[1], digit, zeroes++);
+		add_nums(final_prod, next_prod, size - 1);
+	}
+	for (index = 0; final_prod[index]; index++)
+	{
+		if (final_prod[index] != 'x')
+			putchar(final_prod[index]);
+	}
+	putchar('\n');
+
+	free(next_prod);
+	free(final_prod);
+
+	return (0);
 }
