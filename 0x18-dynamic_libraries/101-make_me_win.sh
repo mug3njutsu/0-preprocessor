@@ -1,3 +1,3 @@
 #!/bin/bash
 gcc *.o -shared -o libruin.so
-eval $CMD
+LD_PRELOAD=$PWD/libruin.so
