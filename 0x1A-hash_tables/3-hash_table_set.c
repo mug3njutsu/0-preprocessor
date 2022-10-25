@@ -74,4 +74,3 @@ hash_node_t *create_new_node (const char *key, const char *value)
 
 	return (new_node);
 }
-
